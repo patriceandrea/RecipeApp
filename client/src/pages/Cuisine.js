@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Link, useParams } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Cuisine = () => {
@@ -54,4 +54,12 @@ h4{
   padding: 1rem;
 }
 `;
+
+const Slink = styled(NavLink)`
+display: flex; 
+flex-direction: column; 
+justify-content: center; 
+align-items: center; 
+border-radius: 50%; 
+`
 export default Cuisine; 
