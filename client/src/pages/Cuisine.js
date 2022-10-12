@@ -55,11 +55,5 @@ h4{
 }
 `;
 
-const Slink = styled(NavLink)`
-display: flex; 
-flex-direction: column; 
-justify-content: center; 
-align-items: center; 
-border-radius: 50%; 
-`
+
 export default Cuisine; 

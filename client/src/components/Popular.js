@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css'
+import { Link } from "react-router-dom";
 
 const Popular = () => {
 
@@ -45,9 +46,11 @@ const Popular = () => {
           return (
             <SplideSlide key={recipe.id}>
               <Card>
-                <p>{recipe.title}</p>
-                <img src={recipe.image} alt={recipe.title} />
-                <Gradient />
+                <Link to={'/recipe/' + recipe.id}>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                  <Gradient />
+                </Link>
               </Card>
             </SplideSlide>
           )
@@ -101,6 +104,5 @@ position: absolute;
 width: 100%; 
 height: 100%; 
 background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)); 
- 
-`
+`;
 export default Popular; 
