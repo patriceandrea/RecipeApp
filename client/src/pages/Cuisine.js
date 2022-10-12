@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Cuisine = () => {
@@ -20,7 +20,12 @@ const Cuisine = () => {
   }, [params.type])
 
   return (
-    <Grid>
+    <Grid
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {cuisine?.map((item) => {
         return (
           <Card key={item.id}>
@@ -35,7 +40,7 @@ const Cuisine = () => {
   )
 }
 
-const Grid = styled.div`
+const Grid = styled(motion.div)`
 display: grid; 
 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
 grid-gap: 3rem; 
