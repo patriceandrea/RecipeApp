@@ -15,20 +15,18 @@ const Search = () => {
 
   return (
     <FormStyle onSubmit={submitHandler}>
-      <form >
-        <div>
-          <FaSearch />
-          <input
-            onChange={(e) => setInput(e.target.value)}
-            type="text"
-            value={input} />
-        </div>
-      </form>
+      <div>
+        <FaSearch />
+        <input
+          onChange={(e) => setInput(e.target.value)}
+          type="text"
+          value={input} />
+      </div>
     </FormStyle>
   )
 }
 
-const FormStyle = styled.div`
+const FormStyle = styled.form`
 margin: 0rem 20rem; 
 
 div {
