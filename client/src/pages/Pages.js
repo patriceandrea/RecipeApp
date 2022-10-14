@@ -1,7 +1,7 @@
 import React from 'react'
 import Recipe from './Recipe';
 import Home from './Home';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Cuisine from './Cuisine';
 import Searched from './Searched';
 
