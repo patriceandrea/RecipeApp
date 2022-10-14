@@ -7,8 +7,6 @@ import Searched from './Searched';
 
 
 const Pages = () => {
-
-
   return (
     <Routes>
       <Route path='/' element={<Home />} />
@@ -16,7 +14,6 @@ const Pages = () => {
       <Route path='/searched/:search' element={<Searched />} />
       <Route path='/recipe/:id' element={<Recipe />} />
     </Routes>
-
   )
 }
 
