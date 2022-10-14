@@ -19,7 +19,7 @@ const Recipe = () => {
 
   useEffect(() => {
     fetchDetails();
-  }, [])
+  }, [params.id])
 
   return (
     <DetailWrapper>
