@@ -20,10 +20,6 @@ const Category = () => {
         <GiNoodles />
         <h4>Thai</h4>
       </Slink>
-      <Slink to={"/cuisine/Japanese"}>
-        <GiChopsticks />
-        <h4>Japanese</h4>
-      </Slink>
     </List>
   )
 }
